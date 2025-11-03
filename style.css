@@ -30,6 +30,17 @@ body {
 }
 /* Couleur */
 
+/* Background */
+
+.bgImageViolet {
+  background-image: url(./asset/image/fondviolet.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Background */
+
 /* Barre de navigation */
 
 .montserrat {

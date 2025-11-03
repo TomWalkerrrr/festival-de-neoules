@@ -4,12 +4,19 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>Festival de néoules</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+
+    <!-- 🎄 Code d'implémentation tailwind (Temporaire) 🎄 -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 🎄 Code d'implémentation tailwind (Temporaire) 🎄 -->
+
+    <!-- 🎄 Code d'implémentation FA (Temporaire) 🎄 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- 🎄 Code d'implémentation FA (Temporaire) 🎄 -->
+
 
 </head>
 
@@ -168,11 +175,11 @@
 
         <!-- ============= 👨‍💻 Container et fond pour les information du festival 👨‍💻 ============= -->
 
-        <div class="flex justify-self-center relative w-full ">
-            <div class="relative w-[90%] rounded-xl mt-12 overflow-hidden flex mx-auto">
-                <div class="imagecontainer relative w-full h-[90vh]">
-                    <img src="./asset/image/fondviolet.png" alt="Fond de couleur violet"
-                        class="absolute object-cover w-full rounded h-[900px] inset-0 z-0">
+        <div class="flex justify-self-center relative h-auto w-full ">
+            <div class="relative bgImageViolet w-[90%] rounded-xl mt-12 overflow-hidden flex mx-auto">
+                <div class="imagecontainer relative w-full h-auto">
+                    <!-- <img src="./asset/image/fondviolet.png" alt="Fond de couleur violet"
+                        class="absolute object-cover w-full h-auto rounded inset-0 z-0"> -->
 
 
                     <div class="informationSection flex-rows justify-center flex mt-4 z-10">
@@ -222,9 +229,11 @@
                         <div
                             class="consigneDiv text-center shadow-lg p-5 flex sm:col-span-1 sm:-mx-1 shadow-black/40 bg-white rounded-sm p-6 flex flex-col justify-center sm:col-span-2">
                             <!-- Titre du bloc -->
-                            <h2 class="text-3xl poppins font-regular">Prévention des risques</h2>
-                            <p class="text-lg montserrat font-regular">Notre partenaire Albatros met à disposition
-                                gratuite des protections auditives ainsi que des casques pour enfants.
+                            <h2 class="text-3xl poppins font-regular">Vestiaire, consigne</h2>
+                            <p class="text-lg montserrat font-regular">Nous ne prenons pas en charge la gestion de vos
+                                objets
+                                personnels sur le site du festival en dehors du camping surveillé.
+
                         </div>
                         <!-- =============😎 Consigne N°3 😎=============-->
 
@@ -235,68 +244,119 @@
 
                     <!-- =================== ♿ Section Accèsibilité ♿ =================== -->
 
-                    <div class="accesibilite flex-rows justify-center flex mt-4 z-10">
+                    <div class="accesibilite flex-rows justify-center flex mt-12 z-10">
                         <div class="texte bg-white rounded opacity-75 flex flex-row text-white text-2xl z-10">
                             <i class="fa-solid fa-universal-access rougepale mt-1 p-2"></i>
-                            <h2 class="p-2 darkcolor poppins font-medium">Accèsibilité</h2>
+                            <h2 class="p-2 darkcolor poppins font-medium">Accèssibilité</h2>
                             <i class="fa-solid fa-universal-access rougepale mt-1 p-2"></i>
                         </div>
                     </div>
 
 
-                    <!-- ==================== ♿ Bloc de consigne N°2 ♿ ====================-->
-
-                    <!-- ==================== 😁 Bloc des consigne 😁 ====================-->
+                    <!-- ==================== ♿ Bloc de consigne N°1 ♿ ====================-->
                     <div
                         class="relative grid grid-cols-1 sm:grid-cols-2 gap-6 w-11/12 max-w-6xl mx-auto justify-items-stretch">
+                        <!-- ==================== ♿ Bloc de consigne N°1 ♿ ====================-->
 
-                        <!-- ==================== 😎 Consigne N°1 😎 ==================== -->
+
+
+                        <!-- ==================== ♿ Consigne N°1 ♿ ==================== -->
                         <div
                             class="consigneDiv text-center lg:flex-row shadow shadow-lg shadow-[#000] w-full lg:max-w-xl p-4 flex-wrap shadow justify-center relative shadow-2xl flex mt-6 flex-col bg-[#ffff] z-10 rounded-sm">
                             <!-- Titre du bloc -->
-                            <h2 class="text-3xl poppins font-regular">Sortie définitive</h2>
-                            <p class="text-lg montserrat font-regular">Pour des raisons de sécurité
-                                la sortie est définitive.
+                            <h2 class="text-3xl poppins font-regular">Mobilité réduite</h2>
+                            <p class="text-lg montserrat font-regular">Le site est accessible aux personnes à mobilité
+                                réduite et comprend des sanitaires adaptés.
                             </p>
                             <!-- Titre du bloc -->
                         </div>
-                        <!-- ==================== 😎 Consigne N°1 😎==================== -->
+                        <!-- ==================== ♿ Consigne N°1 ♿ ==================== -->
 
-                        <!-- ====================😎 Consigne N°2 😎====================-->
+
+
+                        <!-- ==================== ♿ Consigne N°2 ♿ ==================== -->
                         <div
                             class="consigneDiv text-center lg:flex-row p-4 w-full lg:max-w-xl flex-wrap justify-center relative shadow shadow-lg shadow-[#000] flex mt-6 flex-col bg-[#ffff] z-10 rounded-sm">
                             <!-- Titre du bloc -->
-                            <h2 class="text-3xl poppins font-regular">Prévention des risques</h2>
-                            <p class="text-lg montserrat font-regular">Notre partenaire Albatros met à disposition
-                                gratuite des protections auditives ainsi que des casques pour enfants.
+                            <h2 class="text-3xl poppins font-regular">Nos amis à 4 pattes</h2>
+                            <p class="text-lg montserrat font-regular">Pour des raisons d'hygiène et de sécurité,
+                                les chiens ne sont pas admis sur le site.
                             </p>
                             <!-- Titre du bloc -->
                         </div>
-                        <!-- ====================😎 Consigne N°2 😎====================-->
+                        <!-- ==================== ♿ Consigne N°2 ♿ ==================== -->
 
-                        <!-- ====================😎 Consigne N°3 (Horizontale) 😎====================-->
-                        <div
-                            class="consigneDiv text-center shadow-lg p-5 flex sm:col-span-1 sm:-mx-1 shadow-black/40 bg-white rounded-sm p-6 flex flex-col justify-center sm:col-span-2">
-                            <!-- Titre du bloc -->
-                            <h2 class="text-3xl poppins font-regular">Prévention des risques</h2>
-                            <p class="text-lg montserrat font-regular">Notre partenaire Albatros met à disposition
-                                gratuite des protections auditives ainsi que des casques pour enfants.
-                        </div>
-                        <!-- ====================😎 Consigne N°3 😎====================-->
 
                     </div>
-
-                    <!--==================== ♿ Bloc de consigne N°2 ♿ ====================-->
 
 
                     <!-- ====================♿ Section Accèsibilité ♿==================== -->
 
+
+
+
+                    <!-- ==================== 👓 Section Autre - Other section 👓 ==================== -->
+
+
+                    <div class="other flex-rows justify-center flex mt-12 z-10">
+                        <div class="texte bg-white rounded opacity-75 flex flex-row text-white text-2xl z-10">
+                            <i class="fa-solid fa-table-columns rougepale mt-1 p-2"></i>
+                            <h2 class="p-2 darkcolor poppins font-medium">Autre</h2>
+                            <i class="fa-solid fa-table-columns rougepale mt-1 p-2"></i>
+                        </div>
+                    </div>
+
+                    <!-- ============== 👓 Consigne 👓 =============== -->
+
+                    <div
+                        class="relative grid grid-cols-1 sm:grid-cols-2 gap-6 w-11/12 max-w-6xl mx-auto justify-items-stretch">
+
+
+
+
+
+                        <!-- ============== 👓 Consigne N°1 👓 =============== -->
+                        <div
+                            class="consigneDiv text-center lg:flex-row shadow shadow-lg shadow-[#000] w-full lg:max-w-xl p-4 flex-wrap shadow justify-center relative shadow-2xl flex mt-6 flex-col bg-[#ffff] z-10 rounded-sm">
+                            <!-- Titre du bloc -->
+                            <h2 class="text-3xl poppins font-regular">Remboursement</h2>
+                            <p class="text-lg montserrat font-regular">Nous remboursons les
+                                places en cas d'annulation des concerts.
+                                Les places non utilisées par les festivaliers ne sont pas remboursées.
+
+                            </p>
+                            <!-- Titre du bloc -->
+                        </div>
+                        <!-- ============== 👓 Consigne N°1 👓 =============== -->
+
+
+                        <!-- ============== 👓 Consigne N°2 👓 =============== -->
+                        <div
+                            class="consigneDiv text-center lg:flex-row shadow shadow-lg shadow-[#000] w-full lg:max-w-xl p-4 flex-wrap shadow justify-center relative shadow-2xl flex mt-6 flex-col bg-[#ffff] z-10 rounded-sm">
+                            <!-- Titre du bloc -->
+                            <h2 class="text-3xl poppins font-regular">Carte bleue</h2>
+                            <p class="text-lg montserrat font-regular">Des terminaux CB sont en place sur le site pour
+                                régler vos achats de places ou vos consommations buvette.
+                            </p>
+                            <!-- Titre du bloc -->
+                        </div>
+                        <!-- ============== 👓 Consigne N°1 👓 =============== -->
+
+
+                        <!-- ============== 👓 Consigne 👓 =============== -->
+
+
+                        <!-- ==================== 👓 Section Autre - Other section 👓 ==================== -->
+
+
+
+
+                    </div>
                 </div>
+
             </div>
 
-        </div>
-
-        <script src="" async defer></script>
+            <script src="" async defer></script>
 </body>
 
 </html>
