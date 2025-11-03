@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #fafafa;
+}
+
+/* Couleur */
+
+.violet {
+  background: #7a4f9a;
+}
+
+.colorviolet {
+  color: #7a4f9a;
+}
+
+.rose {
+  background: #e22369;
+}
+
+.rougepale {
+  color: #cf8383;
+}
+
+.darkcolor {
+  color: #282828;
+}
+/* Couleur */
+
+/* Barre de navigation */
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+.poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+.baloo {
+  font-family: "Baloo 2", sans-serif;
+}
+
+.degrade {
+  background: linear-gradient(45deg, #3b105b 70%, #b243439e);
+}
+
+.degradesecond {
+  background: linear-gradient(45deg, #7a4f9a 58%, #b24343);
+}
+
+.degradeDoux {
+  background: linear-gradient(45deg, #3b105b5a 70%, #b2434362);
+}
+
+/* Barre de navigation */
+
+/* Carte */
+
+.card {
+  background-image: url("./asset/image/fondCard.webp");
+}

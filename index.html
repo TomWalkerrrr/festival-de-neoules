@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+
+    <nav id="desktopNav" class="lg:flex hidden flex-wrap items-center degrade">
+        <img src="./asset/image/arbrelogo.png" alt="" class="w-24 ml-5">
+        <ul class="flex flex-wrap gap-24 mt-6 text-white text-3xl montserrat ml-12">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Billetterie</a></li>
+            <li><a href="#">Artistes</a></li>
+            <li><a href="#">Bénévolat</a></li>
+            <li><a href="#">Contact</a></li>
+            <li class="mt-0 ml-auto">
+                <a href="#" class="flex flex-col ml-auto items-center text-center">
+                    <i class="fas fa-user-circle text-4xl"></i>
+                    <span class="text-xs mt-1">Se connecter</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <nav id="desktopNav" class="flex lg:hidden flex-wrap rounded-b items-center degrade">
+        <img src="./asset/image/arbrelogo.png" alt="" class="w-24 ml-5">
+        <h2 class="text-white text-xl">Festival de néoules</h2>
+        <i class="fa-solid fa-bars text-white text-xl mt-1 ml-4"></i>
+        <ul class="flex hidden flex-col gap-24 mt-6 text-white text-3xl montserrat mx-auto">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Billetterie</a></li>
+            <li><a href="#">Artistes</a></li>
+            <li><a href="#">Bénévolat</a></li>
+            <li><a href="#">Contact</a></li>
+            <li class="mt-0 ml-auto">
+                <a href="#" class="flex flex-col ml-auto items-center text-center">
+                    <i class="fas fa-user-circle text-4xl"></i>
+                    <span class="text-xs mt-1">Se connecter</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="relative h-[70vh] w-full">
+        <img src="./asset/image/affichemain.webp" alt="" class="object-cover h-full w-full">
+
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
+            <h2 class="text-3xl poppins md:text-5xl font-bold mb-4 drop-shadow-lg">Festival de Néoules 2026</h2>
+            <h2 class="text-3xl poppins md:text-5xl font-bold mb-4 drop-shadow-lg">Du 1 Janvier au 3 Janvier</h2>
+            <button type="button"
+                class="violet mt-24 text-white transition ease duration-300 shadow hover:shadow-[#7a4f9a] shadow-lg rounded px-7 py-3 md:text-lg transition">
+                <span class="text-3xl montserrat font-bold tracking-widest">Billetterie</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Section pour le titre de la classe artistes -->
+    <div class="artisteSection flex-rows justify-center flex mt-12">
+        <div class="texte degradeDoux rounded flex flex-row text-white text-2xl">
+            <i class="fa-solid fa-layer-group mt-1 p-2 colorviolet"></i>
+            <h2 class="p-2 darkcolor poppins font-medium">Les artistes</h2><i
+                class="fa-solid fa-layer-group mt-1 p-2 colorviolet"></i>
+        </div>
+    </div>
+    <!-- Section pour le titre de la classe artistes -->
+
+
+    <!-- //================ 🐺 Carte de "statistique" des artistes top 3 🐺 ================\\ -->
+    <div class="stats-card relative w-full">
+        <div class="relative w-[90%] rounded-xl mt-12 overflow-hidden flex mx-auto">
+            <img src="./asset/image/fondviolet.png" alt="Fond violet"
+                class="absolute object-cover w-full rounded h-full inset-0 z-0">
+
+            <div class="relative z-10 flex flex-wrap justify-center gap-6 px-4 py-12">
+
+                <!-- //=========== 🎭 Artiste N°1 ================\\ -->
+                <div class="card w-full sm:w-1/2 md:w-1/3 lg:w-1/4 rose p-4 rounded shadow">
+                    <img src="./asset/image/dawa.jpg" alt="Image de l'artiste Dawa" class="rounded border border-2">
+                    <h2 class="text-white text-2xl mt-3 flex justify-center baloo font-medium">Nom de l'artiste</h2>
+
+                    <div
+                        class="tag uppercase violet text-white montserrat font-medium w-fit flex mx-auto text-xl p-1 pl-2 pr-2 mt-2 rounded">
+                        <span>rock</span>
+                    </div>
+
+                    <button type="button"
+                        class="degradesecond w-full p-3 mt-8 text-white montserrat text-xl rounded"><span>Du
+                            1 au
+                            2
+                            janvier</span>
+                    </button>
+
+                </div>
+                <!-- //=========== 🎭 Artiste N°1 ================\\ -->
+
+
+
+                <!-- //=========== 🎭 Artiste N°2 ================\\ -->
+                <div class="card w-full sm:w-1/2 md:w-1/3 lg:w-1/4 rose p-4 rounded shadow">
+                    <img src="./asset/image/dawa.jpg" alt="Image de l'artiste Dawa" class="rounded border border-2">
+                    <h2 class="text-white text-2xl mt-3 flex justify-center baloo font-medium">Nom de l'artiste</h2>
+
+                    <div
+                        class="tag uppercase violet text-white montserrat font-medium w-fit flex mx-auto text-xl p-1 pl-2 pr-2 mt-2 rounded">
+                        <span>rock</span>
+                    </div>
+
+                    <button type="button"
+                        class="degradesecond w-full p-3 mt-8 text-white montserrat text-xl rounded"><span>Du
+                            1 au
+                            2
+                            janvier</span>
+                    </button>
+                </div>
+                <!-- //=========== 🎭 Artiste N°2 ================\\ -->
+
+
+
+                <!-- //=========== 🎭 Artiste N°3 ================\\ -->
+                <div class="card w-full sm:w-1/2 md:w-1/3 lg:w-1/4 rose p-4 rounded shadow">
+                    <img src="./asset/image/dawa.jpg" alt="Image de l'artiste Dawa" class="rounded border border-2">
+                    <h2 class="text-white text-2xl mt-3 flex justify-center baloo font-medium">Nom de l'artiste</h2>
+
+                    <div
+                        class="tag uppercase violet text-white montserrat font-medium w-fit flex mx-auto text-xl p-1 pl-2 pr-2 mt-2 rounded">
+                        <span>rock</span>
+                    </div>
+
+                    <button type="button"
+                        class="degradesecond w-full p-3 mt-8 text-white montserrat text-xl rounded"><span>Du
+                            1 au
+                            2
+                            janvier</span>
+                    </button>
+                </div>
+                <!-- //=========== 🎭 Artiste N°3 ================\\ -->
+
+            </div>
+
+        </div>
+        <!-- //================ 🐺 Carte de "statistique" des artistes top 3 🐺 ================\\ -->
+
+
+
+
+        <!-- //================ 😶 Informations du festival (Festival information) 😶 ================\\ -->
+
+        <div class="informationSection flex-rows justify-center flex mt-12">
+            <div class="texte degradeDoux rounded flex flex-row text-white text-2xl">
+                <h2 class="p-2 darkcolor poppins font-medium">Informations du festival</h2><i
+                    class="fa-solid fa-info mt-1 p-2 colorviolet"></i>
+            </div>
+        </div>
+        <!-- //================ 😶 Informations du festival (Festival information) 😶 ================\\ -->
+
+
+
+        <!-- ============= 👨‍💻 Container et fond pour les information du festival 👨‍💻 ============= -->
+
+        <div class="flex justify-self-center relative w-full ">
+            <div class="relative w-[90%] rounded-xl mt-12 overflow-hidden flex mx-auto">
+                <div class="imagecontainer relative w-full h-[90vh]">
+                    <img src="./asset/image/fondviolet.png" alt="Fond de couleur violet"
+                        class="absolute object-cover w-full rounded h-[900px] inset-0 z-0">
+
+
+                    <div class="informationSection flex-rows justify-center flex mt-4 z-10">
+                        <div class="texte bg-white rounded opacity-75 flex flex-row text-white text-2xl z-10">
+                            <i class="fa-solid fa-shield-halved rougepale mt-1 p-2"></i>
+                            <h2 class="p-2 darkcolor poppins font-medium">Sécurité</h2>
+                            <i class="fa-solid fa-shield-halved rougepale mt-1 p-2"></i>
+                        </div>
+                    </div>
+                    <!-- ============= 👨‍💻 Container et fond pour les information du festival 👨‍💻 ============= -->
+
+
+
+
+
+                    <!-- =============😁 Bloc des consigne 😁 =============-->
+                    <div
+                        class="relative grid grid-cols-1 sm:grid-cols-2 gap-6 w-11/12 max-w-6xl mx-auto justify-items-stretch">
+
+
+
+                        <!-- =============😎 Consigne N°1 😎=============-->
+                        <div
+                            class="consigneDiv text-center lg:flex-row shadow shadow-lg shadow-[#000] w-full lg:max-w-xl p-4 flex-wrap shadow justify-center relative shadow-2xl flex mt-6 flex-col bg-[#ffff] z-10 rounded-sm">
+                            <!-- Titre du bloc -->
+                            <h2 class="text-3xl poppins font-regular">Sortie définitive</h2>
+                            <p class="text-lg montserrat font-regular">Pour des raisons de sécurité
+                                la sortie est définitive.
+                            </p>
+                            <!-- Titre du bloc -->
+                        </div>
+                        <!-- =============😎 Consigne N°1 😎=============-->
+
+                        <!-- =============😎 Consigne N°2 😎=============-->
+                        <div
+                            class="consigneDiv text-center lg:flex-row p-4 w-full lg:max-w-xl flex-wrap justify-center relative shadow shadow-lg shadow-[#000] flex mt-6 flex-col bg-[#ffff] z-10 rounded-sm">
+                            <!-- Titre du bloc -->
+                            <h2 class="text-3xl poppins font-regular">Prévention des risques</h2>
+                            <p class="text-lg montserrat font-regular">Notre partenaire Albatros met à disposition
+                                gratuite des protections auditives ainsi que des casques pour enfants.
+                            </p>
+                            <!-- Titre du bloc -->
+                        </div>
+                        <!-- =============😎 Consigne N°2 😎=============-->
+
+                        <!-- =============😎 Consigne N°3 (Horizontale) 😎=============-->
+                        <div
+                            class="consigneDiv text-center shadow-lg p-5 flex sm:col-span-1 sm:-mx-1 shadow-black/40 bg-white rounded-sm p-6 flex flex-col justify-center sm:col-span-2">
+                            <!-- Titre du bloc -->
+                            <h2 class="text-3xl poppins font-regular">Prévention des risques</h2>
+                            <p class="text-lg montserrat font-regular">Notre partenaire Albatros met à disposition
+                                gratuite des protections auditives ainsi que des casques pour enfants.
+                        </div>
+                        <!-- =============😎 Consigne N°3 😎=============-->
+
+                    </div>
+
+
+
+
+                    <!-- =================== ♿ Section Accèsibilité ♿ =================== -->
+
+                    <div class="accesibilite flex-rows justify-center flex mt-4 z-10">
+                        <div class="texte bg-white rounded opacity-75 flex flex-row text-white text-2xl z-10">
+                            <i class="fa-solid fa-universal-access rougepale mt-1 p-2"></i>
+                            <h2 class="p-2 darkcolor poppins font-medium">Accèsibilité</h2>
+                            <i class="fa-solid fa-universal-access rougepale mt-1 p-2"></i>
+                        </div>
+                    </div>
+
+
+                    <!-- ==================== ♿ Bloc de consigne N°2 ♿ ====================-->
+
+                    <!-- ==================== 😁 Bloc des consigne 😁 ====================-->
+                    <div
+                        class="relative grid grid-cols-1 sm:grid-cols-2 gap-6 w-11/12 max-w-6xl mx-auto justify-items-stretch">
+
+                        <!-- ==================== 😎 Consigne N°1 😎 ==================== -->
+                        <div
+                            class="consigneDiv text-center lg:flex-row shadow shadow-lg shadow-[#000] w-full lg:max-w-xl p-4 flex-wrap shadow justify-center relative shadow-2xl flex mt-6 flex-col bg-[#ffff] z-10 rounded-sm">
+                            <!-- Titre du bloc -->
+                            <h2 class="text-3xl poppins font-regular">Sortie définitive</h2>
+                            <p class="text-lg montserrat font-regular">Pour des raisons de sécurité
+                                la sortie est définitive.
+                            </p>
+                            <!-- Titre du bloc -->
+                        </div>
+                        <!-- ==================== 😎 Consigne N°1 😎==================== -->
+
+                        <!-- ====================😎 Consigne N°2 😎====================-->
+                        <div
+                            class="consigneDiv text-center lg:flex-row p-4 w-full lg:max-w-xl flex-wrap justify-center relative shadow shadow-lg shadow-[#000] flex mt-6 flex-col bg-[#ffff] z-10 rounded-sm">
+                            <!-- Titre du bloc -->
+                            <h2 class="text-3xl poppins font-regular">Prévention des risques</h2>
+                            <p class="text-lg montserrat font-regular">Notre partenaire Albatros met à disposition
+                                gratuite des protections auditives ainsi que des casques pour enfants.
+                            </p>
+                            <!-- Titre du bloc -->
+                        </div>
+                        <!-- ====================😎 Consigne N°2 😎====================-->
+
+                        <!-- ====================😎 Consigne N°3 (Horizontale) 😎====================-->
+                        <div
+                            class="consigneDiv text-center shadow-lg p-5 flex sm:col-span-1 sm:-mx-1 shadow-black/40 bg-white rounded-sm p-6 flex flex-col justify-center sm:col-span-2">
+                            <!-- Titre du bloc -->
+                            <h2 class="text-3xl poppins font-regular">Prévention des risques</h2>
+                            <p class="text-lg montserrat font-regular">Notre partenaire Albatros met à disposition
+                                gratuite des protections auditives ainsi que des casques pour enfants.
+                        </div>
+                        <!-- ====================😎 Consigne N°3 😎====================-->
+
+                    </div>
+
+                    <!--==================== ♿ Bloc de consigne N°2 ♿ ====================-->
+
+
+                    <!-- ====================♿ Section Accèsibilité ♿==================== -->
+
+                </div>
+            </div>
+
+        </div>
+
+        <script src="" async defer></script>
+</body>
+
+</html>
