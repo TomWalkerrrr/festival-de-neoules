@@ -2,11 +2,39 @@
 <html lang="fr">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Festival de néoules</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 📱 Métadonné basique 📱-->
+    <meta name="description"
+        content="Découvrez le Festival de Néoules dans le Var (83) : concerts, artistes internationaux, ambiance conviviale et programmation éclectique au cœur de la Provence. Infos, dates, billetterie, accès et animations.">
+    <meta name="keywords"
+        content="Festival de Néoules, festival Var, festival 83, festival musique Provence, concerts Var, événement culturel Var, musique live Néoules, festival été Sud France, programme festival Néoules, billetterie festival Néoules, artistes festival Néoules">
+    <meta name="author" content="Festival de Néoules">
+    <meta name="robots" content="index,follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 📱 Métadonné basique 📱-->
+
+    <!-- Carte facebook -->
+    <meta property="og:title" content="Festival de Néoules 83 – Musique &amp; Culture en Provence">
+    <meta property="og:description"
+        content="Un festival incontournable dans le Var : musique live, artistes variés, ambiance festive et nature en Provence. Rejoignez-nous à Néoules !">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.example.com/festival-neoules">
+    <meta property="og:site_name" content="Festival de Néoules">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:image" content="https://www.example.com/assets/images/festival-neoules-og.jpg">
+    <meta property="og:image:alt" content="Affiche du Festival de Néoules - musique en Provence">
+    <!-- Carte facebook -->
+
+    <!-- ✖️ Carte X ✖️ -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@FestivalNeoules">
+    <meta name="twitter:creator" content="@FestivalNeoules">
+    <meta name="twitter:title" content="Festival de Néoules – Musique &amp; Festival dans le Var">
+    <meta name="twitter:description"
+        content="Vivez l’expérience du Festival de Néoules : concerts estivaux, artistes talentueux et ambiance provençale.">
+    <meta name="twitter:image" content="https://www.example.com/assets/images/festival-neoules-twitter.jpg">
+    <!-- ✖️ Carte X ✖️ -->
+
     <link rel="stylesheet" href="style.css">
 
     <!-- 🎄 Code d'implémentation tailwind (Temporaire) 🎄 -->
@@ -17,6 +45,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- 🎄 Code d'implémentation FA (Temporaire) 🎄 -->
 
+    <title>Festival de néoules</title>
 
 </head>
 
@@ -40,9 +69,9 @@
         </ul>
     </nav>
 
-    <nav id="desktopNav" class="flex lg:hidden flex-wrap rounded-b items-center degrade">
+    <nav id="mobileNav" class="flex sm:justify-center lg:hidden flex-wrap rounded-b items-center degrade">
         <img src="./asset/image/arbrelogo.png" alt="" class="w-24 ml-5">
-        <h2 class="text-white text-xl">Festival de néoules</h2>
+        <h2 class="text-white poppins text-xl">Festival de néoules</h2>
         <i class="fa-solid fa-bars text-white text-xl mt-1 ml-4"></i>
         <ul class="flex hidden flex-col gap-24 mt-6 text-white text-3xl montserrat mx-auto">
             <li><a href="#">Accueil</a></li>
@@ -175,7 +204,7 @@
 
         <!-- ============= 👨‍💻 Container et fond pour les information du festival 👨‍💻 ============= -->
 
-        <div class="flex justify-self-center relative h-auto w-full ">
+        <div class="flex justify-self-center relative h-auto w-full">
             <div class="relative bgImageViolet w-[90%] rounded-xl mt-12 overflow-hidden flex mx-auto">
                 <div class="imagecontainer relative w-full h-auto">
                     <!-- <img src="./asset/image/fondviolet.png" alt="Fond de couleur violet"
@@ -317,7 +346,7 @@
 
                         <!-- ============== 👓 Consigne N°1 👓 =============== -->
                         <div
-                            class="consigneDiv text-center lg:flex-row shadow shadow-lg shadow-[#000] w-full lg:max-w-xl p-4 flex-wrap shadow justify-center relative shadow-2xl flex mt-6 flex-col bg-[#ffff] z-10 rounded-sm">
+                            class="consigneDiv mb-4 text-center lg:flex-row shadow shadow-lg shadow-[#000] w-full lg:max-w-xl p-4 flex-wrap shadow justify-center relative shadow-2xl flex mt-6 flex-col bg-[#ffff] z-10 rounded-sm">
                             <!-- Titre du bloc -->
                             <h2 class="text-3xl poppins font-regular">Remboursement</h2>
                             <p class="text-lg montserrat font-regular">Nous remboursons les
@@ -345,16 +374,142 @@
 
                         <!-- ============== 👓 Consigne 👓 =============== -->
 
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                        <!-- ==================== 👓 Section Autre - Other section 👓 ==================== -->
+        <!-- ==================== 👓 Section Autre - Other section 👓 ==================== -->
 
+
+        <!-- 🎆 Section des question frequentes 🎆 -->
+
+        <!-- Section pour le titre de la classe ask question -->
+        <div class="artisteSection flex-rows justify-center flex mt-12">
+            <div class="texte degradeDoux rounded flex flex-row text-white text-2xl">
+                <i class="fa-solid fa-comment mt-1 p-2 rougepale"></i>
+                <h2 class="p-2 darkcolor poppins font-medium">Questions fréquentes</h2><i
+                    class="fa-solid fa-comment mt-1 p-2 rougepale"></i>
+            </div>
+        </div>
+        <!-- Section pour le titre de la classe ask question -->
+
+
+        <div
+            class="containerOfAskQuestion flex-col flex relative h-auto w-[90%] pt-12 rounded-xl justify-center items-center mx-auto mt-12">
+
+            <!-- 🎁 Question A 🎁 -->
+            <div class="questionA w-11/12 h-auto rounded shadow shadow-2xl shadow-black p-4 bg-white flex flex-row">
+                <h3 class="text-xl poppins">L'entrée est-elle gratuite pour les enfants ?</h3>
+                <i class="fa-solid fa-arrow-down text-2xl ml-auto" id="downQuestionA"></i>
+            </div>
+            <div class="reponse relative flex rounded-b flex-col bg-stone-200 w-10/12 p-3 montserrat">
+                <p>Oui, l'entrée est bien gratuite pour les enfants de moin de 10 ans</p>
+            </div>
+            <!-- 🎁 Question A 🎁 -->
+
+            <!-- 🎋 Séparateur d'éléments 🎋 -->
+            <div class="separator mb-12"></div>
+            <!-- 🎋 Séparateur d'éléments 🎋 -->
+
+            <!-- 🎁 Question B 🎁 -->
+
+            <div class="questionB w-11/12 h-auto rounded shadow shadow-2xl shadow-black p-4 bg-white flex flex-row">
+                <h3 class="text-xl poppins">Ou acheter mon billet ?</h3>
+                <i class="fa-solid fa-arrow-down text-2xl ml-auto" id="downQuestionB"></i>
+            </div>
+            <div class="reponse relative hidden flex rounded-b flex-col bg-stone-200 w-10/12 p-3 montserrat">
+                <p>Oui, l'entrée est bien gratuite pour les enfants de moin de 10 ans</p>
+            </div>
+
+            <!-- 🎁 Question B 🎁 -->
+
+
+            <!-- 🎋 Séparateur d'éléments 🎋 -->
+            <div class="separator mb-12"></div>
+            <!-- 🎋 Séparateur d'éléments 🎋 -->
+
+
+            <!-- 🎁 Question C 🎁 -->
+
+            <div class="questionC w-11/12 h-auto rounded shadow shadow-2xl shadow-black p-4 bg-white flex flex-row">
+                <h3 class="text-xl poppins">Les animaux sont-ils acceptés ?</h3>
+                <i class="fa-solid fa-arrow-down text-2xl ml-auto" id="downQuestionC"></i>
+            </div>
+            <div class="reponse hidden relative flex rounded-b flex-col bg-stone-200 w-10/12 p-3 montserrat">
+                <p>Oui, l'entrée est bien gratuite pour les enfants de moin de 10 ans</p>
+            </div>
+
+            <!-- 🎁 Question C 🎁 -->
+
+            <!-- 🎋 Séparateur d'éléments 🎋 -->
+            <div class="separator mb-12"></div>
+            <!-- 🎋 Séparateur d'éléments 🎋 -->
+
+        </div>
+
+        <!-- 🎆 Section des question frequentes 🎆 -->
+
+
+        <!-- 🚗 Section pour le titre de la classe se rendre au festival 🚗 -->
+        <div class="artisteSection flex-rows justify-center flex mt-12">
+            <div class="texte degradeDoux rounded flex flex-row text-white text-2xl">
+                <i class="fa-solid fa-location-dot mt-1 p-2 rougepale"></i>
+                <h2 class="p-2 darkcolor poppins font-medium">Se rendre au festival</h2><i
+                    class="fa-solid fa-location-dot mt-1 p-2 rougepale"></i>
+            </div>
+        </div>
+        <!-- 🚗 Section pour le titre de la classe se rendre au festival 🚗 -->
+
+
+
+
+        <div class="flex flex-row bgImageViolet w-[90%] mx-auto rounded-xl p-5 gap-5 items-stretch">
+
+            <div class="flex flex-row justify-center mx-auto space-x-4">
+
+
+                <!-- 🎇 Premier bloc 🎇 -->
+                <div
+                    class="bg-white w-1/2 flex mx-auto mt-5 mb-5 rounded-sm shadow shadow-2xl shadow-black h-auto pb-10">
+
+                    <div class="infoAdresse justify-center pt-2 pl-2 pr-2 w-5/5 mx-auto">
+                        <div class="degrade text-xl p-4 rounded-xl mb-12 flex flex-row mx-auto">
+                            <i class="fa-solid fa-map-pin mr-auto rougepale"></i>
+                            <h3 class="montserrat font-medium text-white">Notre adresse</h3><i
+                                class="fa-solid fa-map-pin ml-auto rougepale"></i>
+                        </div>
+
+                        <div class="adresse text-2xl text-center montserrat">
+                            <h4>Bastide de châteauloin
+                                quartier valette
+                                83136 NÉOULES</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- 🎇 Premier bloc 🎇 -->
+
+
+                <!-- 🎇 Deuxieme bloc 🎇 -->
+
+                <div
+                    class="bg-white w-1/2 flex mx-auto mt-5 mb-5 rounded-sm shadow shadow-2xl shadow-black h-auto pb-10">
+
+                    <!-- 🎨 API de Google map 🎨 -->
+                    <div class="ggm justify-center pt-2 pl-2 pr-2 w-5/5 mx-auto">
 
 
 
                     </div>
+                    <!-- 🎨 API de Google map 🎨 -->
+
                 </div>
 
+                <!-- 🎇 Deuxieme bloc 🎇 -->
+
             </div>
+
+
 
             <script src="" async defer></script>
 </body>

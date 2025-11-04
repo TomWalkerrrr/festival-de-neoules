@@ -74,3 +74,14 @@ body {
 .card {
   background-image: url("./asset/image/fondCard.webp");
 }
+
+/* Catégorie question */
+
+.containerOfAskQuestion {
+  background-image: url("./asset/image/fondviolet.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Catégorie question */
