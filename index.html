@@ -37,6 +37,8 @@
 
     <link rel="stylesheet" href="style.css">
 
+    <link rel="shortcut icon" href="./asset/image/arbrelogo.png" type="image/x-icon">
+
     <!-- 🎄 Code d'implémentation tailwind (Temporaire) 🎄 -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- 🎄 Code d'implémentation tailwind (Temporaire) 🎄 -->
@@ -72,10 +74,10 @@
             <li><a href="./index.html">Accueil</a></li>
             <li><a href="./pages/dev.html">Billetterie</a></li>
             <li><a href="./pages/dev.html">Artistes</a></li>
-            <li><a href="./pages/dev.html">Bénévolat</a></li>
-            <li><a href="./pages/dev.html">Contact</a></li>
-            <li class="mt-0 ml-auto">
-                <a href="./pages/dev.html" class="flex flex-col ml-auto items-center text-center">
+            <li><a href="./pages/artistes.html">Bénévolat</a></li>
+            <li><a href="./pages/contact.html">Contact</a></li>
+            <li class="mt-0">
+                <a href="./pages/dev.html" class="flex flex-col items-center text-center">
                     <i class="fas fa-user-circle text-3xl"></i>
                     <span class="text-xs mt-1">Se connecter</span>
                 </a>
@@ -87,15 +89,15 @@
         class="fixed top-[0%] w-full flex justify-center sm:gap-24 max-xs:gap-0 lg:hidden flex-wrap rounded-b items-center degrade z-[9999]">
         <img src="./asset/image/arbrelogo.png" alt="Logo du festival" class="w-24 ml-5">
         <h2 class="text-white poppins text-xl">Festival de néoules</h2>
-        <i class="fa-solid fa-bars text-white text-xl mt-1 ml-4"></i>
-        <ul class="flex hidden flex-col gap-24 mt-6 text-white text-3xl montserrat mx-auto">
+        <i id="openMenu" class="fa-solid fa-bars text-white text-xl mt-1 ml-4"></i>
+        <ul id="ulMenu" class="flex ml-12 hidden flex-col gap-12 mt-6 text-white text-3xl montserrat">
             <li><a href="./index.html">Accueil</a></li>
             <li><a href="./pages/dev.html">Billetterie</a></li>
             <li><a href="./pages/dev.html">Artistes</a></li>
-            <li><a href="./pages/dev.html">Bénévolat</a></li>
-            <li><a href="./pages/dev.html">Contact</a></li>
-            <li class="mt-0 ml-auto">
-                <a href="./pages/dev.html" class="flex flex-col ml-auto items-center text-center">
+            <li><a href="./pages/artistes.html">Bénévolat</a></li>
+            <li><a href="./pages/contact.html">Contact</a></li>
+            <li class="mt-0">
+                <a href="./pages/dev.html" class="flex flex-col pr-5 pb-10 items-center text-center">
                     <i class="fas fa-user-circle text-4xl"></i>
                     <span class="text-xs mt-1">Se connecter</span>
                 </a>
@@ -118,10 +120,11 @@
 
     <!-- Section pour le titre de la classe artistes -->
     <div class="artisteSection flex-rows justify-center flex mt-12">
-        <div class="texte degradeDoux rounded flex flex-row text-white text-2xl">
-            <i class="fa-solid fa-layer-group mt-1 p-2 colorviolet"></i>
+        <div class="texte bg-basicTitle rounded flex flex-row text-white text-2xl"
+            style="box-shadow: 0px 5px 20px #89898997;">
+            <i class="fa-solid fa-layer-group mt-1 p-2 rougepale"></i>
             <h2 class="p-2 darkcolor poppins font-medium">Les artistes</h2><i
-                class="fa-solid fa-layer-group mt-1 p-2 colorviolet"></i>
+                class="fa-solid fa-layer-group mt-1 p-2 rougepale"></i>
         </div>
     </div>
     <!-- Section pour le titre de la classe artistes -->
@@ -208,9 +211,10 @@
         <!-- //================ 😶 Informations du festival (Festival information) 😶 ================\\ -->
 
         <div class="informationSection flex-rows justify-center flex mt-12">
-            <div class="texte degradeDoux rounded flex flex-row text-white text-2xl">
+            <div class="texte bg-basicTitle rounded flex flex-row text-white text-2xl"
+                style="box-shadow: 0px 5px 20px #89898997;">
                 <h2 class="p-2 darkcolor poppins font-medium">Informations du festival</h2><i
-                    class="fa-solid fa-info mt-1 p-2 colorviolet"></i>
+                    class="fa-solid fa-info mt-1 p-2 rougepale"></i>
             </div>
         </div>
         <!-- //================ 😶 Informations du festival (Festival information) 😶 ================\\ -->
@@ -401,7 +405,8 @@
 
         <!-- Section pour le titre de la classe ask question -->
         <div class="artisteSection flex-rows justify-center flex mt-12">
-            <div class="texte degradeDoux rounded flex flex-row text-white text-2xl">
+            <div class="texte bg-basicTitle rounded flex flex-row text-white text-2xl"
+                style="box-shadow: 0px 5px 20px #89898997;">
                 <i class="fa-solid fa-comment mt-1 p-2 rougepale"></i>
                 <h2 class="p-2 darkcolor poppins font-medium">Questions fréquentes</h2><i
                     class="fa-solid fa-comment mt-1 p-2 rougepale"></i>
@@ -468,7 +473,8 @@
 
         <!-- 🚗 Section pour le titre de la classe se rendre au festival 🚗 -->
         <div class="artisteSection flex-rows justify-center flex mt-12">
-            <div class="texte degradeDoux rounded flex flex-row text-white text-2xl">
+            <div class="texte bg-basicTitle rounded flex flex-row text-white text-2xl"
+                style="box-shadow: 0px 5px 20px #89898997;">
                 <i class="fa-solid fa-location-dot mt-1 p-2 rougepale"></i>
                 <h2 class="p-2 darkcolor poppins font-medium">Se rendre au festival</h2><i
                     class="fa-solid fa-location-dot mt-1 p-2 rougepale"></i>
@@ -531,7 +537,8 @@
 
         <!-- 🚗 Section pour le titre de la classe où se garer 🚗 -->
         <div class="whereToPark flex-rows justify-center flex mt-12">
-            <div class="texte degradeDoux rounded flex flex-row text-white text-2xl">
+            <div class="texte bg-basicTitle rounded flex flex-row text-white text-2xl"
+                style="box-shadow: 0px 5px 20px #89898997;">
                 <i class="fa-solid fa-car mt-1 p-2 rougepale"></i>
                 <h2 class="p-2 darkcolor poppins font-medium">Où se garer ?</h2><i
                     class="fa-solid fa-car mt-1 p-2 rougepale"></i>
@@ -683,7 +690,8 @@
 
         </script>
 
-        <script src="mainPage.js"></script>
+        <script src="./pages/js/footer.js"></script>
+        <script src="./pages/js/navbar.js"></script>
 </body>
 
 </html>
