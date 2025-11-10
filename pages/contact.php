@@ -1,8 +1,36 @@
+<?php 
+
+require_once 'database.php';
+
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+    if(isset($_POST['email'], $_POST['message'], $_POST['prenom'], $_POST['nom'])){
+        $prenom = $_POST['prenom'];
+        $nom = $_POST['nom'];
+        $email = $_POST['email'];
+        $message = $_POST['message'];
+        $sql = ("INSERT INTO contact(prenom, nom, email, message) VALUES (:prenom, :nom, :email, :message)");
+        $stmt = $db->prepare($sql);
+        $stmt->bindParam(":prenom", $prenom);
+        $stmt->bindParam(":nom", $nom);
+        $stmt->bindParam(":email", $email);
+        $stmt->bindParam(":message", $message);
+        $stmt->execute();
+        header("Location: validateContact.html");
+        exit;
+    };
+}
+
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
+
     <!-- 📱 Métadonné basique 📱-->
     <meta name="description"
         content="Découvrez le Festival de Néoules dans le Var (83) : concerts, artistes internationaux, ambiance conviviale et programmation éclectique au cœur de la Provence. Infos, dates, billetterie, accès et animations.">
@@ -47,19 +75,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- 🎄 Code d'implémentation FA (Temporaire) 🎄 -->
 
-
-    <!-- Api de map -->
-
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <!-- Api de map -->
-
-    <title>Festival de néoules</title>
+    <title>Festival de néoules - Contact</title>
 
 </head>
 
 <body>
-
 
     <nav id="desktopNav" class="fixed top-[0%] w-full lg:flex hidden flex-wrap items-center degrade z-[9999]">
         <img src="../asset/image/arbrelogo.png" alt="Logo du festival" class="w-24 ml-5">
@@ -69,8 +89,8 @@
             <li><a href="./artistes.html">Artistes</a></li>
             <li><a href="./benevolat.html">Bénévolat</a></li>
             <li><a href="./contact.html">Contact</a></li>
-            <li class="mt-0">
-                <a href="../pages/dev.html" class="flex flex-col items-center text-center">
+            <li class="mt-0 ml-auto">
+                <a href="./pages/dev.html" class="flex flex-col ml-auto items-center text-center">
                     <i class="fas fa-user-circle text-3xl"></i>
                     <span class="text-xs mt-1">Se connecter</span>
                 </a>
@@ -90,13 +110,14 @@
             <li><a href="./benevolat.html">Bénévolat</a></li>
             <li><a href="./contact.html">Contact</a></li>
             <li class="mt-0">
-                <a href="../pages/dev.html" class="flex flex-col pr-5 pb-10 items-center text-center">
+                <a href="./pages/dev.html" class="flex flex-col pr-5 pb-10 items-center text-center">
                     <i class="fas fa-user-circle text-4xl"></i>
                     <span class="text-xs mt-1">Se connecter</span>
                 </a>
             </li>
         </ul>
     </nav>
+
 
     <!-- 💎 Haut de page 💎 -->
 
@@ -105,126 +126,79 @@
         <a href="../index.html"><button type="button"
                 class="rounded-[4px] max-sm:w-3/12 text-white text-xl absolute p-2 w-1/12 montserrat top-[0%] left-[2%] degradesecond mt-24"><span>Retour</span></button></a>
 
-        <h1 class="poppins font-medium mx-auto justify-self-center text-3xl mt-24 max-sm:mt-[165px]">Votre festival</h1>
-        <p class="montserrat font-regular text-lg">Information</p>
+        <h1 class="poppins font-medium mx-auto justify-self-center text-3xl mt-24 max-sm:mt-[165px]">Nous contacter</h1>
+        <p class="montserrat font-regular text-lg">Nous sommes là pour vous répondre.</p>
 
         <div class="image flex justify-center">
-            <img src="../asset/image/Artist-rafiki.svg" alt="Image d'un artiste" class="w-[14%] max-sm:hidden">
-        </div>
-
-        <!-- 💎 Haut de page 💎 -->
-
-
-
-
-        <!-- 🎒 Carte Festi'Minot 🎒 -->
-
-
-        <div
-            class="squareContainer hovercard flex max-xl:h-auto max-sm:flex-col max-sm:pt-5 mx-auto bgImageViolet w-[80%] h-64 rounded mb-12">
-
-            <div class="images flex items-center ml-12">
-                <img src="../asset/image/festiminot1.webp"
-                    alt="Image représentant un enfant pour la catégorie “Festiminot”"
-                    class="w-10/12 rounded h-3/4 object-cover" style="box-shadow: 0px 0px 20px #e9e9e95a;">
-            </div>
-
-            <div class="text flex flex-col items-center">
-                <h2 class="text-white text-4xl uppercase font-medium mt-5 text-white pb-7 self-auto">Festi'Minots
-                </h2>
-                <p class="text-white text-lg w-10/12 pb-5 montserrat">Le coeur du village de Néoules devient le terrain
-                    de jeux
-                    des petits et
-                    des grands
-                    : spectacles,
-                    ateliers, animations, jeux géants en bois ...</p>
-                <button type="button"
-                    class="w-2/12 max-xl:w-5/12 max-lg:w-9/12 max-xl:mb-10 aboutInformationFestival text-white rounded-sm p-4 h-auto degradesecond montserrat"
-                    style="box-shadow: 0px 0px 20px #e9e9e91e;"><span>En
-                        savoir
-                        plus</span></button>
-            </div>
-
+            <img src="../asset/image/Mention-rafiki.svg" alt="Image de contact" class="w-[14%] max-sm:hidden">
         </div>
 
     </div>
 
-
-    <!-- 🎒 Carte Festi'Minot 🎒 -->
-
+    <!-- 💎 Haut de page 💎 -->
 
 
-
-
-
-    <!-- 🔍 Carte Eco-Festival 🔍 -->
+    <!-- 👑 Information de contact 👑 -->
 
 
     <div
-        class="squareContainer hovercard flex max-xl:h-auto mx-auto max-sm:flex-col max-sm:pt-5 bgImageViolet w-[80%] h-64 rounded mb-12">
+        class="bgImageViolet max-xl:w-10/12 rounded flex flex-col mx-auto w-[40%] max-w-screen-md h-auto min-h-[384px]">
 
-        <div class="images flex items-center ml-12">
-            <img src="../asset/image/ecofestivalWebp.webp"
-                alt="Image représentant un enfant pour la catégorie “Festiminot”"
-                class="w-10/12 rounded h-3/4 object-cover" style="box-shadow: 0px 0px 20px #e9e9e95a;">
+
+        <div class="information mt-4 degradesecond rounded p-3 mx-auto flex w-auto">
+            <i class="fa-solid fa-id-card max-sm:hidden rougepale text-2xl mr-2"></i>
+            <h2 class="text-2xl montserrat text-white">Vos informations</h2><i
+                class="fa-solid fa-id-card max-sm:hidden rougepale text-2xl ml-2"></i>
         </div>
 
-        <div class="text flex flex-col items-center">
-            <h2 class="text-white text-4xl uppercase font-medium mt-5 text-white pb-7 self-auto">éco festival
-            </h2>
-            <p class="text-white text-lg w-10/12 pb-5 montserrat text-center">C’est aussi l’éco-responsabilité initiée
-                depuis 2016 afin de réduire l’impact du festival sur l’environnement et favoriser un comportement
-                éco-citoyen.</p>
-            <button type="button"
-                class="w-2/12 aboutInformationFestival mb-12 max-xl:w-5/12 max-lg:w-9/12 text-white rounded-sm p-4 h-auto degradesecond montserrat"
-                style="box-shadow: 0px 0px 20px #e9e9e91e;"><span>En
-                    savoir
-                    plus</span></button>
-        </div>
+        <div class="form">
 
-    </div>
+            <form method="POST">
 
-    </div>
+                <!-- 👑 Les inputs 👑 -->
+
+                <div class="input relative max-sm:flex-col max-sm:w-11/12 flex montserrat font-regular rounded">
+                    <input type="text" class="rounded-sm w-5/12 max-sm:w-11/12 h-9 ml-8 mt-8 p-4" placeholder="Prénom"
+                        name="prenom" id="prenom" required>
+                    <input type="text" class="rounded-sm w-5/12 max-sm:w-11/12 h-9 ml-8 mt-8 p-4" placeholder="Nom"
+                        name="nom" id="nom" required>
+                </div>
+
+                <div class="input relative flex rounded max-sm:w-11/12">
+                    <input type="email" class="rounded-sm w-[calc(10/12*107%)] max-sm:w-11/12 h-9 ml-8 mt-8 p-4"
+                        placeholder="Email" name="email" id="email" required>
+                </div>
+
+                <div class="input relative flex rounded max-sm:w-11/12">
+                    <textarea name="message" id="message"
+                        class="ml-8 p-4 mt-8 rounded w-[calc(10/12*107%)] max-sm:w-11/12 max-h-[300px]"
+                        placeholder="Message..." required minlength="15"></textarea>
+                </div>
+
+                <div class="flex justify-center mt-8 mb-12">
+                    <button type="submit" id="buttonContactSubmit"
+                        class="flex items-center gap-4 px-6 py-3 text-white text-lg font-medium rounded degradeWhite cursor-pointer">
+                        <i class="fa-solid fa-paper-plane mt-1"></i>
+                        <span>Envoyer</span>
+                        <i class="fa-solid fa-paper-plane mt-1"></i>
+                    </button>
+                </div>
 
 
-    <!-- 🔍 Carte Eco-Festival 🔍 -->
+                <!-- 👑 Les inputs 👑 -->
 
+            </form>
 
-
-
-    <!-- 🔍 Carte ARTS SOUS CHÊNES 🔍 -->
-
-
-    <div
-        class="squareContainer hovercard flex max-xl:h-auto max-sm:flex-col max-sm:pt-5 mx-auto bgImageViolet w-[80%] h-64 rounded mb-12">
-
-        <div class="images flex items-center ml-12">
-            <img src="../asset/image/arbresouschene.webp"
-                alt="Image représentant un enfant pour la catégorie “Festiminot”"
-                class="w-10/12 rounded h-3/4 object-cover" style="box-shadow: 0px 0px 20px #e9e9e95a;">
-        </div>
-
-        <div class="text flex flex-col items-center">
-            <h2 class="text-white text-4xl uppercase font-medium mt-5 text-white pb-7 self-auto">ARTS SOUS CHÊNES
-            </h2>
-            <p class="text-white text-lg w-10/12 pb-5 montserrat text-center">Un marché de créateurs et d’artisans
-                locaux, rassemblant des talents passionnés qui proposent des pièces uniques, faites à la main avec soin
-                et authenticité.</p>
-            <button type="button"
-                class="w-2/12 aboutInformationFestival max-xl:w-5/12  mb-12 max-lg:w-9/12 text-white rounded-sm p-4 h-auto degradesecond montserrat"
-                style="box-shadow: 0px 0px 20px #e9e9e91e;"><span>En
-                    savoir
-                    plus</span></button>
         </div>
 
     </div>
 
-    </div>
+
+    <!-- 👑 Information de contact 👑 -->
 
 
-    <!-- 🔍 Carte ARTS SOUS CHÊNES 🔍 -->
 
-
+    <!-- 🥇 Footer 🥇 -->
 
 
 
@@ -316,11 +290,11 @@
 
                 <div class="aboutText flex text-lg text-stone-600 flex-col">
 
-                    <a href="../pages/dev.html" target="_blank">
+                    <a href="./pages/dev.html" target="_blank">
                         <h4>Votre festival</h4>
                     </a>
 
-                    <a href="../pages/dev.html" target="_blank">
+                    <a href="./pages/dev.html" target="_blank">
                         <h5>Information</h4>
                     </a>
 
@@ -333,9 +307,13 @@
     </div>
 
 
-
     <script src="../pages/js/footer.js"></script>
     <script src="../pages/js/navbar.js"></script>
+
+
+    <!-- 🥇 Footer 🥇 -->
+
+
 </body>
 
 </html>

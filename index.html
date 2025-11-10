@@ -2,7 +2,7 @@
 <html lang="fr">
 
 <head>
-
+    <meta charset="UTF-8">
     <!-- 📱 Métadonné basique 📱-->
     <meta name="description"
         content="Découvrez le Festival de Néoules dans le Var (83) : concerts, artistes internationaux, ambiance conviviale et programmation éclectique au cœur de la Provence. Infos, dates, billetterie, accès et animations.">
@@ -72,9 +72,9 @@
         <img src="./asset/image/arbrelogo.png" alt="Logo du festival" class="w-24 ml-5">
         <ul class="flex flex-wrap gap-24 mt-6 text-white text-2xl montserrat ml-12">
             <li><a href="./index.html">Accueil</a></li>
-            <li><a href="./pages/dev.html">Billetterie</a></li>
-            <li><a href="./pages/dev.html">Artistes</a></li>
-            <li><a href="./pages/artistes.html">Bénévolat</a></li>
+            <li><a href="./pages/billetterie.html">Billetterie</a></li>
+            <li><a href="./pages/artistes.html">Artistes</a></li>
+            <li><a href="./pages/benevolat.html">Bénévolat</a></li>
             <li><a href="./pages/contact.html">Contact</a></li>
             <li class="mt-0">
                 <a href="./pages/dev.html" class="flex flex-col items-center text-center">
@@ -92,9 +92,9 @@
         <i id="openMenu" class="fa-solid fa-bars text-white text-xl mt-1 ml-4"></i>
         <ul id="ulMenu" class="flex ml-12 hidden flex-col gap-12 mt-6 text-white text-3xl montserrat">
             <li><a href="./index.html">Accueil</a></li>
-            <li><a href="./pages/dev.html">Billetterie</a></li>
-            <li><a href="./pages/dev.html">Artistes</a></li>
-            <li><a href="./pages/artistes.html">Bénévolat</a></li>
+            <li><a href="./pages/billetterie.html">Billetterie</a></li>
+            <li><a href="./pages/artistes.html">Artistes</a></li>
+            <li><a href="./pages/benevolat.html">Bénévolat</a></li>
             <li><a href="./pages/contact.html">Contact</a></li>
             <li class="mt-0">
                 <a href="./pages/dev.html" class="flex flex-col pr-5 pb-10 items-center text-center">
@@ -111,8 +111,8 @@
         <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
             <h2 class="text-3xl poppins md:text-5xl font-bold mb-4 drop-shadow-lg">Festival de Néoules 2026</h2>
             <h2 class="text-3xl poppins md:text-5xl font-bold mb-4 drop-shadow-lg">Du 1 Janvier au 3 Janvier</h2>
-            <a href="./pages/dev.html" target="_blank"><button type="button"
-                    class="violet mt-24 text-white transition ease duration-300 shadow hover:shadow-[#7a4f9a] shadow-lg rounded px-7 py-3 md:text-lg transition">
+            <a href="./pages/billetterie.html" target="_blank"><button type="button"
+                    class="billeterieBtn violet mt-24 text-white transition ease duration-300 shadow hover:shadow-[#7a4f9a] shadow-lg rounded px-7 py-3 md:text-lg transition">
                     <span class="text-3xl montserrat font-bold tracking-widest">Billetterie</span>
                 </button></a>
         </div>
@@ -120,7 +120,7 @@
 
     <!-- Section pour le titre de la classe artistes -->
     <div class="artisteSection flex-rows justify-center flex mt-12">
-        <div class="texte bg-basicTitle rounded flex flex-row text-white text-2xl"
+        <div class="texte bg-basicTitle rounded-xl flex flex-row text-white text-2xl"
             style="box-shadow: 0px 5px 20px #89898997;">
             <i class="fa-solid fa-layer-group mt-1 p-2 rougepale"></i>
             <h2 class="p-2 darkcolor poppins font-medium">Les artistes</h2><i
@@ -149,7 +149,7 @@
                     </div>
 
                     <button type="button"
-                        class="degradesecond w-full p-3 mt-8 text-white montserrat text-xl rounded"><span>Du
+                        class="artisteDate degradesecond w-full p-3 mt-8 text-white montserrat text-xl rounded"><span>Du
                             1 au
                             2
                             janvier</span>
@@ -171,7 +171,7 @@
                     </div>
 
                     <button type="button"
-                        class="degradesecond w-full p-3 mt-8 text-white montserrat text-xl rounded"><span>Du
+                        class="artisteDate degradesecond w-full p-3 mt-8 text-white montserrat text-xl rounded"><span>Du
                             1 au
                             2
                             janvier</span>
@@ -192,7 +192,7 @@
                     </div>
 
                     <button type="button"
-                        class="degradesecond w-full p-3 mt-8 text-white montserrat text-xl rounded"><span>Du
+                        class="artisteDate degradesecond w-full p-3 mt-8 text-white montserrat text-xl rounded"><span>Du
                             1 au
                             2
                             janvier</span>
@@ -211,7 +211,7 @@
         <!-- //================ 😶 Informations du festival (Festival information) 😶 ================\\ -->
 
         <div class="informationSection flex-rows justify-center flex mt-12">
-            <div class="texte bg-basicTitle rounded flex flex-row text-white text-2xl"
+            <div class="texte bg-basicTitle rounded-xl flex flex-row text-white text-2xl"
                 style="box-shadow: 0px 5px 20px #89898997;">
                 <h2 class="p-2 darkcolor poppins font-medium">Informations du festival</h2><i
                     class="fa-solid fa-info mt-1 p-2 rougepale"></i>
@@ -231,7 +231,7 @@
 
 
                     <div class="informationSection flex-rows justify-center flex mt-4 z-10">
-                        <div class="texte bg-white rounded opacity-75 flex flex-row text-white text-2xl z-10">
+                        <div class="texte bg-white rounded-xl opacity-75 flex flex-row text-white text-2xl z-10">
                             <i class="fa-solid fa-shield-halved rougepale mt-1 p-2"></i>
                             <h2 class="p-2 darkcolor poppins font-medium">Sécurité</h2>
                             <i class="fa-solid fa-shield-halved rougepale mt-1 p-2"></i>
@@ -293,7 +293,7 @@
                     <!-- =================== ♿ Section Accèsibilité ♿ =================== -->
 
                     <div class="accesibilite flex-rows justify-center flex mt-12 z-10">
-                        <div class="texte bg-white rounded opacity-75 flex flex-row text-white text-2xl z-10">
+                        <div class="texte bg-white rounded-xl opacity-75 flex flex-row text-white text-2xl z-10">
                             <i class="fa-solid fa-universal-access rougepale mt-1 p-2"></i>
                             <h2 class="p-2 darkcolor poppins font-medium">Accèssibilité</h2>
                             <i class="fa-solid fa-universal-access rougepale mt-1 p-2"></i>
@@ -347,7 +347,7 @@
 
 
                     <div class="other flex-rows justify-center flex mt-12 z-10">
-                        <div class="texte bg-white rounded opacity-75 flex flex-row text-white text-2xl z-10">
+                        <div class="texte bg-white rounded-xl opacity-75 flex flex-row text-white text-2xl z-10">
                             <i class="fa-solid fa-table-columns rougepale mt-1 p-2"></i>
                             <h2 class="p-2 darkcolor poppins font-medium">Autre</h2>
                             <i class="fa-solid fa-table-columns rougepale mt-1 p-2"></i>
@@ -405,7 +405,7 @@
 
         <!-- Section pour le titre de la classe ask question -->
         <div class="artisteSection flex-rows justify-center flex mt-12">
-            <div class="texte bg-basicTitle rounded flex flex-row text-white text-2xl"
+            <div class="texte bg-basicTitle rounded-xl flex flex-row text-white text-2xl"
                 style="box-shadow: 0px 5px 20px #89898997;">
                 <i class="fa-solid fa-comment mt-1 p-2 rougepale"></i>
                 <h2 class="p-2 darkcolor poppins font-medium">Questions fréquentes</h2><i
@@ -423,7 +423,8 @@
                 <h3 class="text-xl poppins">L'entrée est-elle gratuite pour les enfants ?</h3>
                 <i class="fa-solid fa-arrow-down text-2xl ml-auto" id="downQuestionA"></i>
             </div>
-            <div class="reponse relative flex rounded-b flex-col bg-stone-200 w-10/12 p-3 montserrat">
+            <div id="reponseA"
+                class="hidden ease-in-out relative flex rounded-b flex-col bg-stone-200 w-10/12 p-3 montserrat">
                 <p>Oui, l'entrée est bien gratuite pour les enfants de moin de 10 ans</p>
             </div>
             <!-- 🎁 Question A 🎁 -->
@@ -438,8 +439,11 @@
                 <h3 class="text-xl poppins">Ou acheter mon billet ?</h3>
                 <i class="fa-solid fa-arrow-down text-2xl ml-auto" id="downQuestionB"></i>
             </div>
-            <div class="reponse relative hidden flex rounded-b flex-col bg-stone-200 w-10/12 p-3 montserrat">
-                <p>Oui, l'entrée est bien gratuite pour les enfants de moin de 10 ans</p>
+            <div id="reponseB" class="relative hidden flex rounded-b flex-col bg-stone-200 w-10/12 p-3 montserrat">
+                <p>Vous pouvez acheter votre billet <a class="text-blue-600 font-bold underline underline-2"
+                        href="./pages/billetterie.html">ici</a> ou
+                    directement depuis la
+                    page Billetterie.</p>
             </div>
 
             <!-- 🎁 Question B 🎁 -->
@@ -456,7 +460,7 @@
                 <h3 class="text-xl poppins">Les animaux sont-ils acceptés ?</h3>
                 <i class="fa-solid fa-arrow-down text-2xl ml-auto" id="downQuestionC"></i>
             </div>
-            <div class="reponse hidden relative flex rounded-b flex-col bg-stone-200 w-10/12 p-3 montserrat">
+            <div id="reponseC" class="hidden relative flex rounded-b flex-col bg-stone-200 w-10/12 p-3 montserrat">
                 <p>Oui, l'entrée est bien gratuite pour les enfants de moin de 10 ans</p>
             </div>
 
@@ -473,7 +477,7 @@
 
         <!-- 🚗 Section pour le titre de la classe se rendre au festival 🚗 -->
         <div class="artisteSection flex-rows justify-center flex mt-12">
-            <div class="texte bg-basicTitle rounded flex flex-row text-white text-2xl"
+            <div class="texte bg-basicTitle rounded-xl flex flex-row text-white text-2xl"
                 style="box-shadow: 0px 5px 20px #89898997;">
                 <i class="fa-solid fa-location-dot mt-1 p-2 rougepale"></i>
                 <h2 class="p-2 darkcolor poppins font-medium">Se rendre au festival</h2><i
@@ -537,7 +541,7 @@
 
         <!-- 🚗 Section pour le titre de la classe où se garer 🚗 -->
         <div class="whereToPark flex-rows justify-center flex mt-12">
-            <div class="texte bg-basicTitle rounded flex flex-row text-white text-2xl"
+            <div class="texte bg-basicTitle rounded-xl flex flex-row text-white text-2xl"
                 style="box-shadow: 0px 5px 20px #89898997;">
                 <i class="fa-solid fa-car mt-1 p-2 rougepale"></i>
                 <h2 class="p-2 darkcolor poppins font-medium">Où se garer ?</h2><i
@@ -691,6 +695,7 @@
         </script>
 
         <script src="./pages/js/footer.js"></script>
+        <script src="./pages/js/askQuestion.js"></script>
         <script src="./pages/js/navbar.js"></script>
 </body>
 

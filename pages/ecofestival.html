@@ -2,7 +2,7 @@
 <html lang="fr">
 
 <head>
-
+    <meta charset="UTF-8">
     <!-- 📱 Métadonné basique 📱-->
     <meta name="description"
         content="Découvrez le Festival de Néoules dans le Var (83) : concerts, artistes internationaux, ambiance conviviale et programmation éclectique au cœur de la Provence. Infos, dates, billetterie, accès et animations.">
@@ -47,22 +47,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- 🎄 Code d'implémentation FA (Temporaire) 🎄 -->
 
-    <title>Festival de néoules - Contact</title>
+
+    <!-- Api de map -->
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- Api de map -->
+
+    <title>Festival de néoules</title>
 
 </head>
 
 <body>
 
+
     <nav id="desktopNav" class="fixed top-[0%] w-full lg:flex hidden flex-wrap items-center degrade z-[9999]">
         <img src="../asset/image/arbrelogo.png" alt="Logo du festival" class="w-24 ml-5">
         <ul class="flex flex-wrap gap-24 mt-6 text-white text-2xl montserrat ml-12">
-            <li><a href="./index.html">Accueil</a></li>
-            <li><a href="./pages/dev.html">Billetterie</a></li>
-            <li><a href="./pages/dev.html">Artistes</a></li>
-            <li><a href="./pages/dev.html">Bénévolat</a></li>
-            <li><a href="./pages/dev.html">Contact</a></li>
-            <li class="mt-0 ml-auto">
-                <a href="./pages/dev.html" class="flex flex-col ml-auto items-center text-center">
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="./billetterie.html">Billetterie</a></li>
+            <li><a href="./artistes.html">Artistes</a></li>
+            <li><a href="./benevolat.html">Bénévolat</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li class="mt-0">
+                <a href="../pages/dev.html" class="flex flex-col items-center text-center">
                     <i class="fas fa-user-circle text-3xl"></i>
                     <span class="text-xs mt-1">Se connecter</span>
                 </a>
@@ -76,20 +84,19 @@
         <h2 class="text-white poppins text-xl">Festival de néoules</h2>
         <i id="openMenu" class="fa-solid fa-bars text-white text-xl mt-1 ml-4"></i>
         <ul id="ulMenu" class="flex ml-12 hidden flex-col gap-12 mt-6 text-white text-3xl montserrat">
-            <li><a href="./index.html">Accueil</a></li>
-            <li><a href="./pages/dev.html">Billetterie</a></li>
-            <li><a href="./pages/dev.html">Artistes</a></li>
-            <li><a href="./pages/dev.html">Bénévolat</a></li>
-            <li><a href="./pages/contact.html">Contact</a></li>
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="./billetterie.html">Billetterie</a></li>
+            <li><a href="./artistes.html">Artistes</a></li>
+            <li><a href="./benevolat.html">Bénévolat</a></li>
+            <li><a href="./contact.html">Contact</a></li>
             <li class="mt-0">
-                <a href="./pages/dev.html" class="flex flex-col pr-5 pb-10 items-center text-center">
+                <a href="../pages/dev.html" class="flex flex-col pr-5 pb-10 items-center text-center">
                     <i class="fas fa-user-circle text-4xl"></i>
                     <span class="text-xs mt-1">Se connecter</span>
                 </a>
             </li>
         </ul>
     </nav>
-
 
     <!-- 💎 Haut de page 💎 -->
 
@@ -98,79 +105,184 @@
         <a href="../index.html"><button type="button"
                 class="rounded-[4px] max-sm:w-3/12 text-white text-xl absolute p-2 w-1/12 montserrat top-[0%] left-[2%] degradesecond mt-24"><span>Retour</span></button></a>
 
-        <h1 class="poppins font-medium mx-auto justify-self-center text-3xl mt-24 max-sm:mt-[165px]">Nous contacter</h1>
-        <p class="montserrat font-regular text-lg">Nous sommes là pour vous répondre.</p>
+        <h1 class="poppins font-medium mx-auto justify-self-center text-3xl mt-24 max-sm:mt-[165px]">FESTI'MINOT</h1>
+        <p class="montserrat font-regular text-lg">Information</p>
 
         <div class="image flex justify-center">
-            <img src="../asset/image/Mention-rafiki.svg" alt="Image de contact" class="w-[14%] max-sm:hidden">
+            <img src="../asset/image/Artist-rafiki.svg" alt="Image d'un artiste" class="w-[14%] max-sm:hidden">
+        </div>
+
+        <!-- 💎 Haut de page 💎 -->
+
+
+
+
+        <!-- 🎒 Carte Festi'Minot 🎒 -->
+
+
+        <div
+            class="squareContainer max-lg:flex-col hovercard flex max-xl:h-auto max-sm:flex-col max-sm:pt-5 mx-auto bgImageViolet w-[80%] h-auto rounded mb-12">
+
+            <div class="images flex mt-12 ml-12  max-lg:mr-12">
+                <img src="../asset/image/ecofestivalWebp.webp"
+                    alt="Image représentant un enfant pour la catégorie “Festiminot”"
+                    class="w-12/12 rounded h-1/4 object-cover" style="box-shadow: 0px 0px 20px #e9e9e95a;">
+            </div>
+
+            <div class="text flex flex-col items-center">
+                <h2
+                    class="text-[#282828] text-4xl rounded uppercase font-medium mt-5 mb-7 self-auto bg-basicTitle p-2 rounded">
+                    éco-festival
+                </h2>
+                <p class="text-[#282828] text-lg rounded w-10/12 pb-5 montserrat bg-basicTitle p-3">Le coeur du village
+                    de
+                    Néoules
+                    devient le terrain
+                    de jeux
+                    des petits et
+                    des grands
+                    : spectacles,
+                    ateliers, animations, jeux géants en bois ...</p>
+                <h2
+                    class="text-[#282828] text-4xl uppercase font-medium mt-24 mb-7 self-auto bg-basicTitle p-2 rounded">
+                    Description
+                </h2>
+                <p class="text-[#282828] text-lg w-10/12 rounded mb-12 mt-12 montserrat bg-basicTitle p-3">
+                    Depuis 2016, l'équipe du Festival a entamé une démarche vers le développement durable et la
+                    diminution de son empreinte écologique. ​ 
+                    En 2021, en s’engageant auprès du Collectifs des Festivals COFEES, (collectif des festivals
+                    eco-responsable et solidaires de la région sud) le Festival intègre la démarche RSO (responsabilité
+                    sociétale des organisations) dans sa démarche. ​
+                    En 2023, le Festival intègre l'enquête nationale Festivals en mouvement pour une durée de 3 ans.​
+                </p>
+
+
+                <!-- Eco Action -->
+
+                <h2
+                    class="text-[#282828] text-4xl uppercase font-medium mt-12 mb-7 self-auto bg-basicTitle p-2 rounded">
+                    NOS ECO-ACTIONS
+                </h2>
+
+                <div
+                    class="ecoactions flex flex-col items-center text-[#282828] text-lg w-10/12 rounded mb-5 mt-12 montserrat bg-basicTitle p-3">
+
+                    <h3 class="text-2xl font-bold"><i class="fa-solid fa-recycle" style="color: #63E6BE;"></i> NOS
+                        ECO-ACTIONS <i class="fa-solid fa-recycle" style="color: #63E6BE;"></i></h3>
+
+                    <br>
+
+                    <p>
+                        Tri et revalorisation des déchets sur site avec des collecteurs adaptés.Tri des produits
+                        toxiques et dangereux.
+                    </p>
+                    <br>
+
+                </div>
+
+                <!-- Eco Action -->
+
+
+                <!-- Eco Action -->
+
+                <div
+                    class="ecoactions flex flex-col items-center text-[#282828] text-lg w-10/12 rounded mb-5 montserrat bg-basicTitle p-3">
+
+                    <h3 class="text-2xl font-bold"><i class="fa-solid fa-recycle" style="color: #63E6BE;"></i>
+                        SIGNALETIQUE <i class="fa-solid fa-recycle" style="color: #63E6BE;"></i></h3>
+
+                    <br>
+
+                    <p>
+                        Installation d’une signalétique incitant les participants à trier leurs déchets et
+                        sensibilisation à l’utilisation des dispositifs prévus pour leurs collectes.
+                    </p>
+                    <br>
+
+                </div>
+
+                <!-- Eco Action -->
+
+
+                <!-- Eco Action -->
+
+                <div
+                    class="ecoactions flex flex-col items-center text-[#282828] text-lg w-10/12 rounded mb-5 montserrat bg-basicTitle p-3">
+
+                    <h3 class="text-2xl font-bold"><i class="fa-solid fa-recycle" style="color: #63E6BE;"></i>
+                        ECO-CUP <i class="fa-solid fa-recycle" style="color: #63E6BE;"></i></h3>
+
+                    <br>
+
+                    <p>
+                        Incitation auprès des bénévoles et prestataires pour apporter leur gourde et couverts.
+                    </p>
+                    <br>
+
+                </div>
+
+                <!-- Eco Action -->
+
+
+
+
+
+                <!-- Eco Action -->
+
+                <div
+                    class="ecoactions flex flex-col items-center text-[#282828] text-lg w-10/12 rounded mb-5 montserrat bg-basicTitle p-3">
+
+                    <h3 class="text-2xl font-bold"><i class="fa-solid fa-recycle" style="color: #63E6BE;"></i>
+                        CONSOMMATIONS <i class="fa-solid fa-recycle" style="color: #63E6BE;"></i></h3>
+
+                    <br>
+
+                    <p>
+                        Création d'une brigade énergie, veille sur le consommable.
+                    </p>
+                    <br>
+
+                </div>
+
+                <!-- Eco Action -->
+
+
+
+
+
+                <!-- Eco Action -->
+
+                <div
+                    class="ecoactions flex flex-col items-center text-[#282828] text-lg w-10/12 rounded mb-5 montserrat bg-basicTitle p-3">
+
+                    <h3 class="text-2xl font-bold"><i class="fa-solid fa-recycle" style="color: #63E6BE;"></i>
+                        CONSOMMATIONS <i class="fa-solid fa-recycle" style="color: #63E6BE;"></i></h3>
+
+                    <br>
+
+                    <p>
+                        Privilégier l’utilisation de produits et d’installations réutilisables et recyclables.
+                    </p>
+                    <br>
+
+                </div>
+
+                <!-- Eco Action -->
+
+
+
+            </div>
+
         </div>
 
     </div>
 
-    <!-- 💎 Haut de page 💎 -->
-
-
-    <!-- 👑 Information de contact 👑 -->
-
-
-    <div
-        class="bgImageViolet max-xl:w-10/12 rounded flex flex-col mx-auto w-[40%] max-w-screen-md h-auto min-h-[384px]">
-
-
-        <div class="information mt-4 degradesecond rounded p-3 mx-auto flex w-auto">
-            <i class="fa-solid fa-id-card max-sm:hidden rougepale text-2xl mr-2"></i>
-            <h2 class="text-2xl montserrat text-white">Vos informations</h2><i
-                class="fa-solid fa-id-card max-sm:hidden rougepale text-2xl ml-2"></i>
-        </div>
-
-        <div class="form">
-
-            <form method="POST">
-
-                <!-- 👑 Les inputs 👑 -->
-
-                <div class="input relative max-sm:flex-col max-sm:w-11/12 flex montserrat font-regular rounded">
-                    <input type="text" class="rounded-sm w-5/12 max-sm:w-11/12 h-9 ml-8 mt-8 p-4" placeholder="Prénom"
-                        name="prenom" id="prenom" required>
-                    <input type="text" class="rounded-sm w-5/12 max-sm:w-11/12 h-9 ml-8 mt-8 p-4" placeholder="Nom"
-                        name="nom" id="nom" required>
-                </div>
-
-                <div class="input relative flex rounded max-sm:w-11/12">
-                    <input type="email" class="rounded-sm w-[calc(10/12*107%)] max-sm:w-11/12 h-9 ml-8 mt-8 p-4"
-                        placeholder="Email" name="email" id="email" required>
-                </div>
-
-                <div class="input relative flex rounded max-sm:w-11/12">
-                    <textarea name="message" id="message"
-                        class="ml-8 p-4 mt-8 rounded w-[calc(10/12*107%)] max-sm:w-11/12 max-h-[300px]"
-                        placeholder="Message..." required minlength="15"></textarea>
-                </div>
-
-                <div class="flex justify-center mt-8 mb-12">
-                    <button type="submit" id="buttonContactSubmit"
-                        class="flex items-center gap-4 px-6 py-3 text-white text-lg font-medium rounded degradeWhite cursor-pointer">
-                        <i class="fa-solid fa-paper-plane mt-1"></i>
-                        <span>Envoyer</span>
-                        <i class="fa-solid fa-paper-plane mt-1"></i>
-                    </button>
-                </div>
-
-
-                <!-- 👑 Les inputs 👑 -->
-
-            </form>
-
-        </div>
-
     </div>
 
 
-    <!-- 👑 Information de contact 👑 -->
+    <!-- 🎒 Carte Festi'Minot 🎒 -->
 
 
-
-    <!-- 🥇 Footer 🥇 -->
 
 
 
@@ -262,11 +374,11 @@
 
                 <div class="aboutText flex text-lg text-stone-600 flex-col">
 
-                    <a href="./pages/dev.html" target="_blank">
+                    <a href="../pages/dev.html" target="_blank">
                         <h4>Votre festival</h4>
                     </a>
 
-                    <a href="./pages/dev.html" target="_blank">
+                    <a href="../pages/dev.html" target="_blank">
                         <h5>Information</h4>
                     </a>
 
@@ -279,13 +391,9 @@
     </div>
 
 
+
     <script src="../pages/js/footer.js"></script>
     <script src="../pages/js/navbar.js"></script>
-
-
-    <!-- 🥇 Footer 🥇 -->
-
-
 </body>
 
 </html>
